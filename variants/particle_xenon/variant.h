@@ -160,8 +160,7 @@ static const uint8_t AREF = PIN_AREF;
  */
 #define PIN_SERIAL1_RX         9
 #define PIN_SERIAL1_TX         10
-#define PIN_SERIAL1_CTS        4
-#define PIN_SERIAL1_RTS        3
+
 #define PIN_SERIAL2_RX         5
 #define PIN_SERIAL2_TX         4
 #define PIN_SERIAL2_CTS        6
