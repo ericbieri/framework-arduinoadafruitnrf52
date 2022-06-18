@@ -255,9 +255,17 @@ size_t Uart::write(const uint8_t *buffer, size_t size)
 
 //------------- Serial1 (or Serial in case of nRF52832) -------------//
 #ifdef NRF52832_XXAA
-  Uart Serial( NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL_RX, PIN_SERIAL_TX );
+  #if defined(PIN_SERIAL_RTS) && defined(PIN_SERIAL_CTS)
+    Uart Serial(NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL_RX, PIN_SERIAL_TX, PIN_SERIAL_CTS, PIN_SERIAL_RTS);
+  #else
+    Uart Serial(NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL_RX, PIN_SERIAL_TX);
+  #endif
 #else
-  Uart Serial1( NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL1_RX, PIN_SERIAL1_TX );
+  #if defined(PIN_SERIAL1_RTS) && defined(PIN_SERIAL1_CTS)
+    Uart Serial1(NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PIN_SERIAL1_CTS, PIN_SERIAL1_RTS);
+  #else
+    Uart Serial1(NRF_UARTE0, UARTE0_UART0_IRQn, PIN_SERIAL1_RX, PIN_SERIAL1_TX);
+  #endif
 #endif
 
 extern "C"
@@ -270,11 +278,11 @@ extern "C"
 
 //------------- Serial2 -------------//
 #if defined(PIN_SERIAL2_RX) && defined(PIN_SERIAL2_TX)
-#if defined(PIN_SERIAL2_RTS) && defined(PIN_SERIAL2_CTS)
-Uart Serial2(NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PIN_SERIAL2_CTS, PIN_SERIAL2_RTS);
-#else
-Uart Serial2( NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX);
-#endif
+  #if defined(PIN_SERIAL2_RTS) && defined(PIN_SERIAL2_CTS)
+    Uart Serial2(NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PIN_SERIAL2_CTS, PIN_SERIAL2_RTS);
+  #else
+    Uart Serial2(NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX);
+  #endif
 
 extern "C"
 {
