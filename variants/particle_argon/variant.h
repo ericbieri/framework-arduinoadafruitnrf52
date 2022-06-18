@@ -168,10 +168,10 @@ static const uint8_t AREF = PIN_AREF;
 #define PIN_SERIAL1_RTS        3
 
 // ESP32 Network Co-Processor
-#define PIN_SERIAL_ESP32_RX    5
-#define PIN_SERIAL_ESP32_TX    4
-#define PIN_SERIAL_ESP32_CTS   6
-#define PIN_SERIAL_ESP32_RTS   8
+#define PIN_SERIAL2_RX    5
+#define PIN_SERIAL2_TX    4
+#define PIN_SERIAL2_CTS   6
+#define PIN_SERIAL2_RTS   8
 
 /*
  * SPI Interfaces
