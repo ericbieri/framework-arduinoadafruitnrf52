@@ -270,7 +270,11 @@ extern "C"
 
 //------------- Serial2 -------------//
 #if defined(PIN_SERIAL2_RX) && defined(PIN_SERIAL2_TX)
+#if defined(PIN_SERIAL2_RTS) && defined(PIN_SERIAL2_CTS)
 Uart Serial2( NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX );
+#else
+Uart Serial2(NRF_UARTE1, UARTE1_IRQn, PIN_SERIAL2_RX, PIN_SERIAL2_TX, PIN_SERIAL2_CTS, PIN_SERIAL2_RTS);
+#endif
 
 extern "C"
 {
