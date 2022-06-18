@@ -164,8 +164,8 @@ static const uint8_t AREF = PIN_AREF;
  */
 #define PIN_SERIAL1_TX         9
 #define PIN_SERIAL1_RX         10
-// #define PIN_SERIAL1_CTS        4
-// #define PIN_SERIAL1_RTS        3
+// #define PIN_SERIAL1_CTS        3
+// #define PIN_SERIAL1_RTS        2
 
 // ESP32 Network Co-Processor
 #define PIN_SERIAL2_RX    5
