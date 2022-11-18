@@ -84,11 +84,15 @@ const uint32_t g_ADigitalPinMap[] =
   _PINNUM(0, 12),  // P0.12 (PWR)
   _PINNUM(1, 9),   // P1.09 (CHG)
 
-  // D39 .. D41
-  // ESP32
-  _PINNUM(0, 16),  // P0.16 (BOOT_MODE)
-  _PINNUM(0, 24),  // P0.24 (WIFI_EN)
-  _PINNUM(0, 7),   // P0.07 (HOST_WAKE)
+  // D39 .. D45
+  // ESP32 RCP
+  _PINNUM(1, 4),  // P1.04 (UART2_RX) 
+  _PINNUM(1, 5),  // P1.05 (UART2_TX) 
+  _PINNUM(1, 7),  // P1.07 (UART2_RTS)
+  _PINNUM(1, 6),  // P1.06 (UART2_CTS)
+  _PINNUM(0, 16), // P0.16 (BOOT_MODE)
+  _PINNUM(0, 24), // P0.24 (WIFI_EN)
+  _PINNUM(0, 7),  // P0.07 (HOST_WAKE)
 
 };
 

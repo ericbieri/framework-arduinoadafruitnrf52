@@ -38,8 +38,8 @@ extern "C"
 #endif // __cplusplus
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (41)
-#define NUM_DIGITAL_PINS     (41)
+#define PINS_COUNT           (45)
+#define NUM_DIGITAL_PINS     (45)
 #define NUM_ANALOG_INPUTS    (6) // A6 is used for battery, A7 is analog reference
 #define NUM_ANALOG_OUTPUTS   (0)
 
@@ -153,9 +153,9 @@ static const uint8_t A7 = PIN_A7;
 #define PIN_PWR            (37)
 #define PIN_CHG            (38)
 
-#define PIN_BOOT_MODE      (39)
-#define PIN_WIFI_EN        (40)
-#define PIN_HOST_WAKE      (41)
+#define PIN_BOOT_MODE      (43)
+#define PIN_WIFI_EN        (44)
+#define PIN_HOST_WAKE      (45)
 
 static const uint8_t AREF = PIN_AREF;
 
@@ -168,10 +168,10 @@ static const uint8_t AREF = PIN_AREF;
 // #define PIN_SERIAL1_RTS        2
 
 // ESP32 Network Co-Processor
-#define PIN_SERIAL2_RX    5
-#define PIN_SERIAL2_TX    4
-#define PIN_SERIAL2_CTS   6
-#define PIN_SERIAL2_RTS   8
+#define PIN_SERIAL2_RX    39
+#define PIN_SERIAL2_TX    40
+#define PIN_SERIAL2_RTS   41
+#define PIN_SERIAL2_CTS   42
 
 /*
  * SPI Interfaces
